@@ -3,6 +3,7 @@
 ;; Author: Daniel <njdan.5691@gmail.com>
 ;; Version: 0.1
 
+:::###autoload
 (defun align-table (beg end)
   (interactive "r")
   (flush-lines "^$" beg end)
@@ -11,6 +12,7 @@
   (align-regexp beg end "\\(\\s-*\\)|" 1 0 "y")
   (sort-lines t beg end))
 
+:::###autoload
 (defun unhtml (start end)
   (interactive "r")
   (save-excursion
