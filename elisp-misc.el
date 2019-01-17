@@ -1,3 +1,8 @@
+;;; elisp-misc.el --- Dan Misc elisp functions
+;;
+;; Author: Daniel <njdan.5691@gmail.com>
+;; Version: 0.1
+
 (defun align-table (beg end)
   (interactive "r")
   (flush-lines "^$" beg end)
