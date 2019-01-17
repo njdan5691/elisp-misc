@@ -27,3 +27,5 @@
       )))
 
 
+(provide 'lisp-misc)
+;;; elisp-misc.el ends here
