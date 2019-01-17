@@ -34,5 +34,5 @@
       )))
 
 
-(provide 'lisp-misc)
+(provide 'elisp-misc)
 ;;; elisp-misc.el ends here
