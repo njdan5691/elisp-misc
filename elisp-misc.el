@@ -11,7 +11,7 @@
 ;;; Code:
 
 ;;;###autoload
-(defun elm:find-file-init ()                                                                        \
+(defun elispm:find-file-init ()                                                                        \
   (interactive)
   (find-file (expand-file-name "~/.emacs.d/init.el")))
 
@@ -25,7 +25,7 @@
   (sort-lines t beg end))
 
 ;;;###autoload
-(defun unhtml (start end)
+(defun elispm:unhtml (start end)
   (interactive "r")
   (save-excursion
     (save-restriction
