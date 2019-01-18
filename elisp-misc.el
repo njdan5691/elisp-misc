@@ -11,6 +11,11 @@
 ;;; Code:
 
 ;;;###autoload
+(defun elm:find-file-init ()                                                                        \
+  (interactive)
+  (find-file (expand-file-name "~/.emacs.d/init.el")))
+
+;;;###autoload
 (defun align-table (beg end)
   (interactive "r")
   (flush-lines "^$" beg end)
