@@ -17,7 +17,7 @@
   (find-file (expand-file-name "~/.emacs.d/init.el")))
 
 ;;;###autoload
-(defun align-table (beg end)
+(defun elispm:align-table (beg end)
   (interactive "r")
   (flush-lines "^$" beg end)
   (replace-string " |" "|" nil beg end)
