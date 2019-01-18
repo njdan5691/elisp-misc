@@ -11,7 +11,8 @@
 ;;; Code:
 
 ;;;###autoload
-(defun elispm:find-file-init ()                                                                        \
+(defun elispm:find-file-init ()    
+  "Function to visit init.el"
   (interactive)
   (find-file (expand-file-name "~/.emacs.d/init.el")))
 
