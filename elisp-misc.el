@@ -11,7 +11,17 @@
 ;;; Code:
 
 ;;;###autoload
+(defun elispm:kill-other-buffers ()
+   "Switch to scratch buffer then Kill all other buffers."
+   (interactive)
+   (switch-to-buffer "*scratch*")
+   (mapc 'kill-buffer (delq (current-buffer) (buffer-list)))
+   (cd (expand-file-name "~/")))
+
+
+;;;###autoload
 (defun elispm:reformat-buffer()
+  "Use 'indent-region to indent the whole buffer"
   (interactive)
   (save-excursion
     (delete-trailing-whitespace)
