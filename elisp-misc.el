@@ -10,11 +10,7 @@
 
 ;;; Code:
 
-(use-package eshell
-  :config
-  (setq eshell-prompt-function
-        (lambda nil " $ "))
-  (setenv "PAGER" "cat"))
+
                                                                                                     
 ;;;###autoload
 (defun elispm:my-auto-complete-disabling-hook ()
