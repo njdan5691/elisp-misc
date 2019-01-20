@@ -10,6 +10,12 @@
 
 ;;; Code:
 
+(defun elispm:reformat-buffer()
+  (interactive)
+  (save-excursion
+    (delete-trailing-whitespace)
+    (indent-region (point-min) (point-max) nil)))
+
 ;;;###autoload
 (defun elispm:toggle-tab-width ()                                                                     
   (interactive)
