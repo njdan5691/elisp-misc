@@ -10,6 +10,12 @@
 
 ;;; Code:
 
+(use-package eshell
+  :config
+  (setq eshell-prompt-function
+        (lambda nil " $ "))
+  (setenv "PAGER" "cat"))
+                                                                                                    
 ;;;###autoload
 (defun elispm:my-auto-complete-disabling-hook ()
   "Check to see if we should disable auto-complete-mode, or font-lock-mode."
