@@ -10,6 +10,7 @@
 
 ;;; Code:
 
+;;;###autoload
 (defun elispm:reformat-buffer()
   (interactive)
   (save-excursion
