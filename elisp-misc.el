@@ -11,6 +11,15 @@
 ;;; Code:
 
 ;;;###autoload
+(defun elispm:toggle-tab-width ()                                                                     
+  (interactive)
+  (cond ((= 8 tab-width) (setq tab-width 1))
+        ((= 1 tab-width) (setq tab-width 2))
+        ((= 2 tab-width) (setq tab-width 4))
+        ((= 4 tab-width) (setq tab-width 6))
+        ((= 6 tab-width) (setq tab-width 8))))
+
+;;;###autoload
 (defun elispm:find-file-init ()    
   "Function to visit init.el"
   (interactive)
