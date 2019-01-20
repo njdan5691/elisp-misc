@@ -11,6 +11,17 @@
 ;;; Code:
 
 ;;;###autoload
+(defun elispm:my-auto-complete-disabling-hook ()
+  "Check to see if we should disable auto-complete-mode, or font-lock-mode."
+  (save-excursion
+    (when (re-search-forward "No auto-complete" 1000 t)
+      (auto-complete-mode -1)))
+  (save-excursion
+    (when (re-search-forward "No font-lock" 1000 t)
+      (font-lock-mode -1))))
+
+
+;;;###autoload
 (defun elispm:kill-other-buffers ()
    "Switch to scratch buffer then Kill all other buffers."
    (interactive)
