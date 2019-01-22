@@ -10,13 +10,6 @@
 
 ;;; Code:
 
-;;;###autoload
-(defun elispm:load-from-github (url file)
-  (unless (file-exists-p file)
-    (url-copy-file url file)
-    (byte-compile-file file))
-  (load-file file))
-
 
 ;;;###autoload
 (defun elispm:my-auto-complete-disabling-hook ()
