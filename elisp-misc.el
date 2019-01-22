@@ -10,8 +10,13 @@
 
 ;;; Code:
 
+;;;###autoload
+(defun elispm:load-from-github (url file)
+  (unless (file-exists-p file)
+    (url-copy-file url file))
+  (load-file file))
 
-                                                                                                    
+
 ;;;###autoload
 (defun elispm:my-auto-complete-disabling-hook ()
   "Check to see if we should disable auto-complete-mode, or font-lock-mode."
@@ -21,7 +26,6 @@
   (save-excursion
     (when (re-search-forward "No font-lock" 1000 t)
       (font-lock-mode -1))))
-
 
 ;;;###autoload
 (defun elispm:kill-other-buffers ()
