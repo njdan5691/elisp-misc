@@ -11,7 +11,7 @@
 ;;; Code:
 
 ;;;###autoload
-(defun ielispm:ask-emacs (&optional initial-input)
+(defun elispm:ask-emacs (&optional initial-input)
 	"Search for a pattern in emacs 'info/' directory using ag.
     INITIAL-INPUT can be given as the initial minibuffer input."
 	(interactive)
