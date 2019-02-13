@@ -16,7 +16,7 @@
     INITIAL-INPUT can be given as the initial minibuffer input."
 	(interactive)
 	(counsel-ag initial-input (car Info-default-directory-list)
-							" -z" "Search emacs/elisp info"))
+							" -z" "search:"))
 
 ;;;###autoload
 (defun elispm:my-auto-complete-disabling-hook ()
