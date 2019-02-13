@@ -11,6 +11,14 @@
 ;;; Code:
 
 ;;;###autoload
+(defun idev:ask-emacs (&optional initial-input)
+	"Search for a pattern in emacs 'info/' directory using ag.
+    INITIAL-INPUT can be given as the initial minibuffer input."
+	(interactive)
+	(counsel-ag initial-input (car Info-default-directory-list)
+							" -z" "Search emacs/elisp info"))
+
+;;;###autoload
 (defun elispm:my-auto-complete-disabling-hook ()
   "Check to see if we should disable auto-complete-mode, or font-lock-mode."
   (save-excursion
