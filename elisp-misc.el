@@ -15,8 +15,8 @@
 	"Search for a pattern in emacs 'info/' directory using ag.
     INITIAL-INPUT can be given as the initial minibuffer input."
 	(interactive)
-	(counsel-ag "sadfasdf" (car Info-default-directory-list)
-							" -z " "search:"))
+	(counsel-ag initial-input (car Info-default-directory-list)
+							" " "search:"))
 
 ;;;###autoload
 (defun elispm:my-auto-complete-disabling-hook ()
