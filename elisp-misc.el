@@ -16,7 +16,7 @@
     INITIAL-INPUT can be given as the initial minibuffer input."
 	(interactive)
 	(counsel-ag "sadfasdf" (car Info-default-directory-list)
-							" " "search:"))
+							" -z " "search:"))
 
 ;;;###autoload
 (defun elispm:my-auto-complete-disabling-hook ()
