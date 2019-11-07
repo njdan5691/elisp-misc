@@ -80,6 +80,8 @@
       (goto-char (point-min))
       (replace-string "<" "&lt;")
       (goto-char (point-min))
+      (replace-string "'" "&apos;")
+      (goto-char (point-min))
       (replace-string ">" "&gt;")
       )))
 
