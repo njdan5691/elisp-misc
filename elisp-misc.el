@@ -85,6 +85,20 @@
       (replace-string ">" "&gt;")
       )))
 
+;;;###autoload
+(defun elispm:read-mb-lines (prompt some-keyseq)
+  (let ((keymap (copy-keymap minibuffer-local-map)))
+    (define-key keymap (kbd "RET") 'newline)
+    (define-key keymap some-keyseq 'exit-minibuffer)
+    (read-from-minibuffer prompt nil keymap)))
+
+;;;###autoload
+(defun elispm:simplified-read-mb-lines (prompt)
+  (let ((keymap (copy-keymap minibuffer-local-map)))
+    (define-key keymap (kbd "RET") 'newline)
+    (read-from-minibuffer prompt nil keymap)))
+
+
 
 (provide 'elisp-misc)
 ;;; elisp-misc.el ends here
