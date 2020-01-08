@@ -65,7 +65,7 @@
 (defun elispm:find-file-hints ()
   "Function to visit Hints"
   (interactive)
-  (find-file (expand-file-name "~/.emacs.d/Hints")))
+  (find-file (expand-file-name "~/.emacs.d/Hints.txt")))
 
 
 
