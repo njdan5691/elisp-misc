@@ -60,6 +60,15 @@
   (interactive)
   (find-file (expand-file-name "~/.emacs.d/init.el")))
 
+
+;;;###autoload
+(defun elispm:find-file-hints ()
+  "Function to visit Hints"
+  (interactive)
+  (find-file (expand-file-name "~/.emacs.d/Hints")))
+
+
+
 ;;;###autoload
 (defun elispm:align-table (beg end)
   (interactive "r")
