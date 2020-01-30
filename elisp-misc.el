@@ -106,6 +106,12 @@
     (define-key keymap (kbd "RET") 'newline)
     (read-from-minibuffer prompt def keymap)))
 
+;;;###autoload
+(defun elm:remove-lines (pattern &optional b e)
+  (interactive "*sPattern:\nr")
+  (save-excursion
+      (flush-lines pattern b e)))
+
 
 
 (provide 'elisp-misc)
