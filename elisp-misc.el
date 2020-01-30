@@ -100,6 +100,13 @@
     (read-from-minibuffer prompt nil keymap)))
 
 
+;;;###autoload
+(defun elispm:simplified-read-mb-lines-def (prompt def)
+  (let ((keymap (copy-keymap minibuffer-local-map)))
+    (define-key keymap (kbd "RET") 'newline)
+    (read-from-minibuffer prompt def keymap)))
+
+
 
 (provide 'elisp-misc)
 ;;; elisp-misc.el ends here
